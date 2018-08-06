@@ -1,0 +1,104 @@
+html,
+body {
+	height: 100%;
+	background-color: #fdfff3;
+}
+
+.box {
+	display: flex;
+  padding-top: 10%;
+  padding-bottom: 20%;
+  align-items: center;
+  justify-content: center;
+}
+
+.box .inner {
+	width: 450px;
+	height: 200px;
+	line-height: 200px;
+	font-size: 4em;
+	font-family: sans-serif;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box .inner:first-child {
+	background-color: #4dacff;
+	color: #ffff4d;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+}
+
+.box .inner:last-child {
+	background-color: #99ccff;
+	color: #ffff4d;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span {
+	position: absolute;
+	animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+	animation-delay: 2.5s;
+	left: -100%;
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}
+
+#demo {
+  font-family: "MyWebFont";
+  font-size: 20px;
+  text-align: center;
+}
+
+#demo2 {
+  font-family: "MyWebFont";
+  font-size: 20px;
+  text-align: center;
+}
+
+.title {
+  font-family: "MyWebFont";
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+  color: #004691;
+}
+
+.navLinks {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 20px;
+  font-family: "MyWebFont";
+  text-align: center;
+}
+
+.game {
+  text-align: center;
+  font-size: 50px;
+  font-family: "MyWebFont";
+  color: #004691;
+}
+
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('Congratulations.eot'); /* IE9 Compat Modes */
+  src: url('Congratulations.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Congratulations.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Congratulations.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Congratulations.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Congratulations.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
